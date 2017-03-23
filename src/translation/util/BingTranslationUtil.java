@@ -6,9 +6,9 @@ import java.util.Properties;
 
 /**
  * @ClassName BingTranslationUtil
- * @Description TODO ±ØÓ¦·­ÒëAPIÅäÖÃĞÅÏ¢
+ * @Description TODO å¿…åº”ç¿»è¯‘APIé…ç½®ä¿¡æ¯
  * @author FangRuitao
- * @date 2016Äê8ÔÂ27ÈÕ
+ * @date 2016å¹´8æœˆ27æ—¥
  */
 public class BingTranslationUtil {
 	//Client Id
@@ -20,18 +20,18 @@ public class BingTranslationUtil {
 	private static final BingTranslationUtil bingTranslationUtil = new BingTranslationUtil();
 	
 	/**
-	 * @Description:TODO ¹¹Ôìº¯Êı£¬³õÊ¼»¯Ö÷ÕÊ»§ÃÜÔ¿¡¢¿Í»§ ID
+	 * @Description:TODO æ„é€ å‡½æ•°ï¼Œåˆå§‹åŒ–ä¸»å¸æˆ·å¯†é’¥ã€å®¢æˆ· ID
 	 * @author FangRuitao
 	 * @throws IOException 
-	 * @date 2016Äê8ÔÂ27ÈÕ
+	 * @date 2016å¹´8æœˆ27æ—¥
 	 */
 	private BingTranslationUtil() {
 		try {
 			Properties preperties = new Properties();
 			InputStream is = Object.class.getResourceAsStream("/translation/resource/conf.properties");
 			preperties.load(is);
-			this.clientId = preperties.getProperty("bing.client_id", "70f0f5d8-4d56-488a-a714-0f4777df930b").trim();
-			this.cientSecret = preperties.getProperty("bing.client_seret", "da6TWJHc15QIDXNW0nbbVyJOFD41q/9RghAvyIAD6yY").trim();
+			this.clientId = preperties.getProperty("bing.client_id", "").trim();
+			this.cientSecret = preperties.getProperty("bing.client_seret", "").trim();
 			is.close();
 		} catch (IOException e) {
 			e.printStackTrace();
